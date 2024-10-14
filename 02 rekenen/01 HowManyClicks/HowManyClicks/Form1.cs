@@ -13,7 +13,7 @@ namespace HowManyClicks
         {
 
             //2) tel hier 1 op bij clicks (zie boven in de klas)
-            
+            clicks++;
             clicksAmountText.Text = clicks.ToString();
         }
     }

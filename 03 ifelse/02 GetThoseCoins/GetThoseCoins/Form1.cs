@@ -103,16 +103,27 @@ namespace GetThoseCoins
 
             //1) als lDown true is dan voer je de code hieronder uit (in de  {} van de if)
             //player.x -= 112.5f * frametime;
-          
+            if (lDown == true){
+                player.x -= 112.5f * frametime;
+            }
+
 
             //2) als rDown true is dan voer je de code hieronder uit (in de  {} van de if)
             //player.x += 112.5f * frametime;
-            
+            if (rDown == true)
+            {
+                player.x -= 112.5f * frametime;
+            }
+
 
             //4) de speler kan nog buiten het scherm komen!!! los dat met een if op.
             // zet bijvoorbeeld de speler x weer terug op size of op het eind van het scherm (size*8)
             SpawnCoins();
             HandleCoinLogic(frametime);
+            if (player == null)
+            {
+                return;
+            }
         }
 
         private void HandleCoinLogic(float frametime)
@@ -129,7 +140,11 @@ namespace GetThoseCoins
                 // - gebruik je de code hieronder in de {} van de if
                 //          coins.Remove(coin);
                 // - tel je 1 bij de score op
-               
+               if (distToPlayer < 0)
+                {
+                    coins.Remove(coin);
+                    score += 1;
+                }
             }
             coins.RemoveAll(coin => coin.y < -10);
         }

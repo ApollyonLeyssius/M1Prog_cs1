@@ -19,6 +19,7 @@ namespace UpAndDown
             if (e.KeyCode == Keys.Space)
             {
                 //1) pas de multiplier aan, zorg dat de multiplier de waarde krijgt van zichzelf * 2
+                multiplier *= 2;
             }
         }
 
@@ -36,6 +37,7 @@ namespace UpAndDown
         {
 			//2) verander de code hieronder: zorg dat je de score verhoogt met 2 keer multiplier
             score += 2;
+            score *= 2;
         }
     }
 }

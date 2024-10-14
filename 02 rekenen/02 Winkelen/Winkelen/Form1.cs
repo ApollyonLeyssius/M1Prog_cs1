@@ -20,7 +20,7 @@ namespace Winkelen
         private void calculateTotal_Click(object sender, EventArgs e)
         {
             //1) reken hier de totaal prijs uit
-            double total = 0;
+            double total = 355;
 
             totalPrice.Text = total.ToString();
         }
