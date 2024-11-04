@@ -76,8 +76,28 @@ namespace MovePlayerLoop
 
         internal void DoLogic(float frametime)
         {
-            //player.x += playerSpeed * frametime;
-            //player.y += playerSpeed * frametime;
+            if
+
+            if (up == true)
+            {
+
+                player.y -= playerSpeed * frametime;
+            }
+
+            if (down == true)
+            {
+                player.y += playerSpeed * frametime;
+            }
+
+            if (left == true)
+            {
+                player.x -= playerSpeed * frametime;
+            }
+
+            if (right == true)
+            {
+                player.x += playerSpeed * frametime;
+            }
 
         }
     }

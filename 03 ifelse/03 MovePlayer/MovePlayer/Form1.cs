@@ -80,10 +80,25 @@ namespace MovePlayer
             // - zorg ervoor dat je TEST (if) of de speler een richting in moet bewegen (bv of up true is)
             // - dan in de {} van die if zet je de de JUISTE code van hieronder.
             // - let op, je moet soms de += en soms de -= gebruiken!
+            if (up == true){
 
-            //player.x += playerSpeed * frametime;
-            //player.y += playerSpeed * frametime;
+                player.y -= playerSpeed * frametime;
+            }
 
+            if (down == true)
+            {
+                player.y += playerSpeed * frametime;
+            }
+
+            if (left == true)
+            {
+                player.x -= playerSpeed * frametime;
+            }
+
+            if(right == true)
+            {
+                player.x += playerSpeed * frametime;
+            }
         }
     }
 }
